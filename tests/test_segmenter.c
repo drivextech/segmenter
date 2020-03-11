@@ -4,7 +4,7 @@
 
 
 
-#define SERVICE_MTU 1024
+#define SERVICE_MTU 8192
 #define DATA_CHUNK_LENGTH 256
 
 segmenter_t segmenter1, segmenter2;
