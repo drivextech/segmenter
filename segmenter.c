@@ -4,7 +4,7 @@
  * Licensed under the License.
  */
 
-#include "packer.h"
+#include "packer/packer.h"
 #include "segmenter.h"
 #include <string.h>
 #include <assert.h>

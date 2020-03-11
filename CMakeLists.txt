@@ -8,9 +8,11 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_EXTENSIONS ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_library(Segmenter_C segmenter.c packer.c)
+include_directories(${PROJECT_SOURCE_DIR})
 
-add_library(Segmenter_CPP segmenter.cpp packer.c)
+add_library(Segmenter_C segmenter.c packer/packer.c)
+
+add_library(Segmenter_CPP segmenter.cpp packer/packer.c)
 
 add_subdirectory(tests)
 

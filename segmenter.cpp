@@ -3,7 +3,7 @@
 // Licensed under the License.
 
 #include "segmenter.hpp"
-#include "packer.h"
+#include "packer/packer.h"
 #include <string.h>
 #include <assert.h>
 
