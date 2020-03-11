@@ -1,0 +1,10 @@
+
+include_directories(${Segmenter_SOURCE_DIR})
+
+add_executable(test_segmenter_C test_segmenter.c)
+target_link_libraries(test_segmenter_C Segmenter_C)
+add_test(test_segmenter_C test_segmenter_C)
+
+add_executable(test_segmenter_CPP test_segmenter.cpp)
+target_link_libraries(test_segmenter_CPP Segmenter_CPP)
+add_test(test_segmenter_CPP test_segmenter_CPP)

@@ -1,0 +1,13 @@
+env: X=Y
+
+compiler: gcc
+
+language: cpp
+
+#install: make ninja cmake get-deps
+
+# script: skip
+
+jobs:
+  include:
+    - script: 'mkdir build && cd build && cmake .. && make && ctest'
