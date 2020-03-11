@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.8)
+cmake_minimum_required(VERSION 3.1.8)
 project(Segmenter VERSION 0.1.0)
 
 include(CTest)
