@@ -67,5 +67,5 @@ int main()
 
     printf("segmenter test %s!\n", ok ? "ok" : "failed");
 
-    return 0;
+    return !ok;
 }
