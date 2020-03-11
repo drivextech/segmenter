@@ -1,3 +1,9 @@
+/**
+ * Copyright 2020 DriveX.Tech. All rights reserved.
+ * 
+ * Licensed under the License.
+ */
+
 #include "packer.h"
 #include "segmenter.h"
 #include <string.h>

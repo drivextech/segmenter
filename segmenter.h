@@ -1,3 +1,7 @@
+// Copyright 2020 DriveX.Tech. All rights reserved.
+// 
+// Licensed under the License.
+
 #pragma once
 #ifndef _SEGMENTER_H_
 #define _SEGMENTER_H_
