@@ -7,7 +7,7 @@
 #define _SEGMENTER_HPP_
 
 #include <vector>
-#include "util/types.h"
+#include "types/types.h"
 
 
 class Segmenter {

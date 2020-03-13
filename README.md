@@ -6,4 +6,4 @@ This library implement segmentation/fragmentation mechanism espcially for ble py
 
 ## TODO
 
-remove directly use of `types.h` and `packer.h`/`packer.c`, should use external library `dxt_util` instead.
+- [x] ~~remove directly use of `types.h` and `packer.h`/`packer.c`, should use external library `dxt_util` instead.~~

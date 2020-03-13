@@ -7,7 +7,7 @@
 #define _SEGMENTER_H_
 
 #include <stdbool.h>
-#include "util/types.h"
+#include "types/types.h"
 
 
 #ifdef __cplusplus

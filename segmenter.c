@@ -4,8 +4,8 @@
  * Licensed under the License.
  */
 
-#include "packer/packer.h"
 #include "segmenter.h"
+#include "marshalling/packer.h"
 #include <string.h>
 #include <assert.h>
 

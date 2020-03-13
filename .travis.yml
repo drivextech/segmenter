@@ -10,4 +10,4 @@ language: cpp
 
 jobs:
   include:
-    - script: 'mkdir build && cd build && cmake .. && make && ctest'
+    - script: 'mkdir build && cd build && cmake -DSELF_TEST_ENABLE=ON .. && make && ctest'

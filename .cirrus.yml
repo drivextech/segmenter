@@ -8,5 +8,5 @@ test_task:
       - image: teeks99/gcc-ubuntu:latest
       - image: teeks99/clang-ubuntu:latest
   test_script:
-    - apt update && apt install -y cmake
-    - mkdir build && cd build && cmake .. && make && ctest
+    - apt update && apt install -y cmake git
+    - mkdir build && cd build && cmake -DSELF_TEST_ENABLE=ON .. && make && ctest

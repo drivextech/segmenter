@@ -3,7 +3,7 @@
 // Licensed under the License.
 
 #include "segmenter.hpp"
-#include "packer/packer.h"
+#include "marshalling/packer.h"
 #include <string.h>
 #include <assert.h>
 
@@ -64,7 +64,7 @@ Segmenter::Status Segmenter::try_pack(std::vector<BYTE>& seger)
 
     if(seger_off + max_seger_payload_length >= seger_data.size()) { // last segment, set MS flag to 1
         is_last_seger = true;
-        data_seg_len = seger_data.size() - seger_off;
+        data_seg_len = (WORD)seger_data.size() - seger_off;
     }
 
     if(data_seg_len == 0) {
@@ -94,7 +94,7 @@ Segmenter::Status Segmenter::pack(std::vector<BYTE>& seger)
 {
     Status status = try_pack(seger);
     if(status != FAILED) {
-        bool ret = skip(seger.size() - SEGMENTER_HDER_LEN);
+        bool ret = skip((WORD)seger.size() - SEGMENTER_HDER_LEN);
         if(ret) {
             ;
         }
@@ -153,7 +153,7 @@ Segmenter::Status Segmenter::unpack(const std::vector<BYTE>& seger)
 {
     Status status = try_unpack(seger);
     if(status != FAILED) {
-        bool ret = skip(seger.size() - SEGMENTER_HDER_LEN);
+        bool ret = skip((WORD)seger.size() - SEGMENTER_HDER_LEN);
         if(ret) {
             ;
         }
