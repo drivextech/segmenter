@@ -19,7 +19,7 @@ public:
     } Status;
 
 public:
-    Segmenter(WORD data_chunk_length = 80);
+    Segmenter(WORD data_chunk_length = 180);
     ~Segmenter();
 
     void reset();

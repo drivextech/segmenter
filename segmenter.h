@@ -15,7 +15,7 @@ extern "C" {
 #endif
 
 
-const WORD SEGMENTER_HDER_LEN;
+const extern WORD SEGMENTER_HDER_LEN;
 // const WORD SEGMENTER_HDER_LEN = 5; // segment header length 5B
 
 typedef enum {
