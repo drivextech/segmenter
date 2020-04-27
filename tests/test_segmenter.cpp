@@ -4,6 +4,7 @@
 #include "segmenter.hpp"
 
 using namespace std;
+using namespace dxt_common;
 
 
 

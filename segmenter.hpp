@@ -19,34 +19,34 @@ public:
     } Status;
 
 public:
-    Segmenter(WORD data_chunk_length = 180);
+    Segmenter(dxt_common::WORD data_chunk_length = 180);
     ~Segmenter();
 
     void reset();
 
-    bool set_data_chunk_length(WORD data_chunk_length);
+    bool set_data_chunk_length(dxt_common::WORD data_chunk_length);
 
-    static bool test_is_started(const std::vector<BYTE>& seger);
-    static bool test_is_finished(const std::vector<BYTE>& seger);
+    static bool test_is_started(const std::vector<dxt_common::BYTE>& seger);
+    static bool test_is_finished(const std::vector<dxt_common::BYTE>& seger);
 
-    bool skip(WORD len);
+    bool skip(dxt_common::WORD len);
 
-    Status try_pack(std::vector<BYTE>& seger);
-    Status pack(std::vector<BYTE>& seger);
+    Status try_pack(std::vector<dxt_common::BYTE>& seger);
+    Status pack(std::vector<dxt_common::BYTE>& seger);
 
-    Status try_unpack(const std::vector<BYTE>& seger);
-    Status unpack(const std::vector<BYTE>& seger);
-
-public:
-    std::vector<BYTE> seger_data;
+    Status try_unpack(const std::vector<dxt_common::BYTE>& seger);
+    Status unpack(const std::vector<dxt_common::BYTE>& seger);
 
 public:
-    static const WORD SEGMENTER_HDER_LEN = 5; // segment header length 5B
+    std::vector<dxt_common::BYTE> seger_data;
+
+public:
+    static const dxt_common::WORD SEGMENTER_HDER_LEN = 5; // segment header length 5B
 
 private:
-    WORD max_seger_length, max_seger_payload_length;
-    BYTE seger_ind;
-    WORD seger_off;
+    dxt_common::WORD max_seger_length, max_seger_payload_length;
+    dxt_common::BYTE seger_ind;
+    dxt_common::WORD seger_off;
 };
 
 

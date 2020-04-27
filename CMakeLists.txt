@@ -16,15 +16,15 @@ if(SELF_TEST_ENABLE)
         WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
     add_subdirectory(dxt_common)
 endif()
-unset(USE_MY_LIB CACHE)
+unset(SELF_TEST_ENABLE CACHE)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
-add_library(Segmenter_C segmenter.c)
+add_library(Segmenter_C STATIC segmenter.c)
 add_dependencies(Segmenter_C dxt_common)
 target_link_libraries(Segmenter_C dxt_common)
 
-add_library(Segmenter_CPP segmenter.cpp)
+add_library(Segmenter_CPP STATIC segmenter.cpp)
 add_dependencies(Segmenter_CPP dxt_common)
 target_link_libraries(Segmenter_CPP dxt_common)
 

@@ -7,6 +7,8 @@
 #include <string.h>
 #include <assert.h>
 
+using namespace dxt_common;
+
 
 Segmenter::Segmenter(WORD data_chunk_length)
 {
